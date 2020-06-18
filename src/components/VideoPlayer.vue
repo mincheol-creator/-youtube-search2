@@ -1,0 +1,20 @@
+<template>
+  <div class="embed-responsive embed-responsive-16by9" v-if="video">
+    <iframe
+      class="embed-responsive-item"
+      v-bind:src="`https://www.youtube.com/embed/${video.id.videoId}`"
+    ></iframe>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "VideoPlayer",
+  props: {
+    video: Object
+  }
+};
+</script>
+
+<style>
+</style>
