@@ -8,22 +8,22 @@
 
 <script>
 import VideoItem from "./VideoItem";
+import { mapGetters } from "vuex";
 
 export default {
   name: "VideoList",
   components: {
-    VideoItem
+    VideoItem,
   },
-  props: {
-    videos: Array
+  computed: {
+    ...mapGetters(["videos"]),
   },
   methods: {
     imageClicked(video) {
       this.$emit("imageClicked", video);
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>
